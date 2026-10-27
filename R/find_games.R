@@ -67,3 +67,4 @@ find_games <- function(players,
   
   arrange(result, desc(.data$rating))
 }
+
