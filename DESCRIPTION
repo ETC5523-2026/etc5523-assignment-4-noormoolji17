@@ -1,14 +1,17 @@
 Package: gamenight
-Title: What the Package Does (One Line, Title Case)
+Title: Find Board Games for Your Game Night 
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Noor Fatima", "Moolji", , "nmoo0016@student.monash.edu", role = c("aut", "cre"))
+Description: Provides a cleaned dataset of BoardGameGeek board games with
+    ratings, player counts, playing times and suggested ages, a function
+    for finding well-rated games that suit a group, and a Shiny app for
+    exploring how much playing time is needed to get a highly rated game.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: 
-    R (>= 3.5)
+     R (>= 4.1.0)
 LazyData: true
 Config/roxygen2/version: 8.1.1
 Imports: 
