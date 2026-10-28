@@ -47,3 +47,16 @@ find_games(players = 2, max_minutes = 30, youngest_age = 8) |>
     ## 5 192291 Sushi Go Par…  2016           2           8           20       8   7.28
     ## # ℹ 4 more variables: average_rating <dbl>, users_rated <int>,
     ## #   cooperative <lgl>, url <chr>
+
+## The data
+
+The package includes `games`: 20,309 tabletop games (board, card, dice
+and party games) with their player counts, playing times, suggested
+minimum ages and ratings. The data comes from
+[BoardGameGeek](https://boardgamegeek.com), via the [Kaggle
+BoardGameGeek Reviews
+dataset](https://www.kaggle.com/datasets/jvanelteren/boardgamegeek-reviews)
+by Jesse van Elteren, as prepared for [TidyTuesday on 25 January
+2022](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-01-25).
+The script that downloads and cleans it is in `data-raw/games.R`. See
+`?games` for what each column means and how the data was cleaned.
