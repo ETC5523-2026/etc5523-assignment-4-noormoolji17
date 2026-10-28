@@ -13,7 +13,7 @@ people are playing, how much time you have and the age of the youngest player,
 and it finds well-rated games that fit, and shows how much better your options
 get if you allow more time.
 
-Documentation website:
+Documentation website:<https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/>
 
 ## Installation
 
