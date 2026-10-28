@@ -236,11 +236,20 @@ server <- function(input, output, session) {
     all$fits <- ifelse(all$playing_time <= input$max_minutes,
                        "Fits your time", "Needs more time")
     
+    # Nudge each game slightly left or right so games with the same playing
+    # time don't hide each other. A fixed seed keeps the dots in the same
+    # place every time the plot redraws.
+    set.seed(1)
+    all$time_jitter <- all$playing_time * 10^runif(nrow(all), -0.03, 0.03)
+    
     # Colour AND shape show whether a game fits, so the plot does not rely on
     # colour alone
-    ggplot(all, aes(x = playing_time, y = rating, colour = fits, shape = fits)) +
-      # A little sideways jitter stops games with the same time hiding each other
-      geom_point(position = position_jitter(width = 0.03, height = 0, seed = 1),
+    ggplot(all, aes(x = time_jitter, y = rating, colour = fits, shape = fits)) +
+      # Context first: games that need more time, drawn underneath
+      geom_point(data = all[all$fits == "Needs more time", ],
+                 alpha = 0.7, size = 2.2) +
+      # Emphasis second: games that fit, drawn on top so they're never hidden
+      geom_point(data = all[all$fits == "Fits your time", ],
                  alpha = 0.7, size = 2.2) +
       geom_vline(xintercept = input$max_minutes, linetype = "dashed",
                  colour = col_text) +
