@@ -1,35 +1,47 @@
 ---
 output: github_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
+```{r, include = FALSE}
+  knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
 
 # gamenight
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-**gamenight** helps you choose a game for your game night. Tell it how many
-people are playing, how much time you have and the age of the youngest player,
-and it finds well-rated games that fit, and shows how much better your options
-get if you allow more time.
+**gamenight** helps you choose a game for your game night. Tell it how
+many people are playing, how much time you have and the age of the
+youngest player, and it finds well-rated games that fit, and shows how
+much better your options get if you allow more time.
 
-Documentation website:<https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/>
+Documentation
+website:<https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/>
 
 ## Installation
 
 Install the package from GitHub:
 
+``` r
+# install.packages("remotes")
+remotes::install_github("ETC5523-2026/etc5523-assignment-4-noormoolji17")
+```
 
 
 ## Launch the app
 
-```r
+``` r
 gamenight::run_app()
 ```
 
-The app is for **someone hosting a game night**, and answers the question:
-*for my group's size and ages, how much time do we need to allow to play a
-really well-rated game?*
+The app is for **someone hosting a game night**, and answers the
+question: *for my group's size and ages, how much time do we need to
+allow to play a really well-rated game?*
 
 ## Find games from the console
 
@@ -44,12 +56,18 @@ find_games(players = 2, max_minutes = 30, youngest_age = 8) |>
 
 ## The data
 
-The package includes `games`: 20,309 tabletop games (board, card, dice and
-party games) with their player counts, playing times, suggested minimum ages
-and ratings. The data comes from [BoardGameGeek](https://boardgamegeek.com),
-via the
-[Kaggle BoardGameGeek Reviews dataset](https://www.kaggle.com/datasets/jvanelteren/boardgamegeek-reviews)
-by Jesse van Elteren, as prepared for
-[TidyTuesday on 25 January 2022](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-01-25).
+The package includes `games`: 20,309 tabletop games (board, card, dice
+and party games) with their player counts, playing times, suggested
+minimum ages and ratings. The data comes from
+[BoardGameGeek](https://boardgamegeek.com), via the [Kaggle
+BoardGameGeek Reviews
+dataset](https://www.kaggle.com/datasets/jvanelteren/boardgamegeek-reviews)
+by Jesse van Elteren, as prepared for [TidyTuesday on 25 January
+2022](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-01-25).
 The script that downloads and cleans it is in `data-raw/games.R`. See
 `?games` for what each column means and how the data was cleaned.
+
+## Generative AI declaration
+
+I used Claude (Anthropic) as a supporting tool throughout this assignment. It helped me draft certain parts of code based on my needs, polish and refine code chunks as well. It helped me with debugging package, check and GitHub setup errors. I also used it to review my work against the course material. I tested all the code and every app scenario, revised the text in my own words, decided which suggestions to keep or reject, and can explain how the package works.
+
