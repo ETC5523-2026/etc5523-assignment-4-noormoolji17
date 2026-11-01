@@ -77,9 +77,9 @@ prepared for TidyTuesday on 25 January 2022
 
 ## Details
 
-Ratings come from BoardGameGeek users who tend to be gaming enthusiasts
-and may favour longer more complex games than casual players would. The
-data is a snapshot from January 2022. Games were removed if their player
-count or playing time was missing if they allowed more than 20 players
-(often a code for "unlimited") or if they took longer than 600 minutes.
-See `data-raw/games.R` for every cleaning step performed.
+Ratings come from BoardGameGeek users. Among well-known games, longer
+games tend to be rated higher, so the ratings may not reflect casual
+groups. The data is a snapshot from January 2022. Games were removed if
+their player count or playing time was missing if they allowed more than
+20 players (often a code for "unlimited") or if they took longer than
+600 minutes. See `data-raw/games.R` for every cleaning step performed.
