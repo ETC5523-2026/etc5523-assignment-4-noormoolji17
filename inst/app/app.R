@@ -275,12 +275,13 @@ server <- function(input, output, session) {
       Players = ifelse(top$min_players == top$max_players, top$min_players,
                        paste0(top$min_players, "-", top$max_players)),
       Minutes = top$playing_time,
-      Age = ifelse(is.na(top$min_age), "Not given", paste0(top$min_age, "+")),
-      Rating = format(round(top$rating, 1), nsmall = 1),
-      `Rated by` = format(top$users_rated, big.mark = ","),
+      `Min. age` = ifelse(is.na(top$min_age), "Not given", paste0(top$min_age, "+")),
+      `Rating (out of 10)` = format(round(top$rating, 1), nsmall = 1),
+      `Number of ratings` = format(top$users_rated, big.mark = ","),
       check.names = FALSE
     )
-  }, sanitize.text.function = identity, striped = TRUE, hover = TRUE, width = "100%")
+  }, sanitize.text.function = identity, striped = TRUE, hover = TRUE,
+  width = "100%", align = "lrrrrr")
 }
 
 shinyApp(ui, server)
