@@ -12,6 +12,12 @@ website:<https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/>
 
 Install the package from GitHub:
 
+``` r
+
+# install.packages("remotes")
+remotes::install_github("ETC5523-2026/etc5523-assignment-4-noormoolji17")
+```
+
 ## Launch the app
 
 ``` r
@@ -34,19 +40,16 @@ library(gamenight)
 
 find_games(players = 2, max_minutes = 30, youngest_age = 8) |>
   head(5)
-```
-
-``` R
-## # A tibble: 5 × 12
-##       id name           year min_players max_players playing_time min_age rating
-##    <int> <chr>         <int>       <int>       <int>        <int>   <int>  <dbl>
-## 1    521 Crokinole      1876           2           4           30       8   7.67
-## 2 163412 Patchwork      2014           2           2           30       8   7.54
-## 3 244522 That's Prett…  2018           1           4           30       8   7.41
-## 4 194655 Santorini      2016           2           4           20       8   7.30
-## 5 192291 Sushi Go Par…  2016           2           8           20       8   7.28
-## # ℹ 4 more variables: average_rating <dbl>, users_rated <int>,
-## #   cooperative <lgl>, url <chr>
+#> # A tibble: 5 × 12
+#>       id name           year min_players max_players playing_time min_age rating
+#>    <int> <chr>         <int>       <int>       <int>        <int>   <int>  <dbl>
+#> 1    521 Crokinole      1876           2           4           30       8   7.67
+#> 2 163412 Patchwork      2014           2           2           30       8   7.54
+#> 3 244522 That's Prett…  2018           1           4           30       8   7.41
+#> 4 194655 Santorini      2016           2           4           20       8   7.30
+#> 5 192291 Sushi Go Par…  2016           2           8           20       8   7.28
+#> # ℹ 4 more variables: average_rating <dbl>, users_rated <int>,
+#> #   cooperative <lgl>, url <chr>
 ```
 
 ## The data
@@ -62,3 +65,13 @@ by Jesse van Elteren, as prepared for [TidyTuesday on 25 January
 The script that downloads and cleans it is in `data-raw/games.R`. See
 [`?games`](https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/reference/games.md)
 for what each column means and how the data was cleaned.
+
+## Generative AI declaration
+
+I used Claude (Anthropic) as a supporting tool throughout this
+assignment. It helped me draft certain parts of code based on my needs,
+polish and refine code chunks as well. It helped me with debugging
+package, check and GitHub setup errors. I also used it to review my work
+against the course material. I tested all the code and every app
+scenario, revised the text in my own words, decided which suggestions to
+keep or reject, and can explain how the package works.

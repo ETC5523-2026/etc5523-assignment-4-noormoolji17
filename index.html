@@ -55,11 +55,14 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>Install the package from GitHub:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ETC5523-2026/etc5523-assignment-4-noormoolji17"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="launch-the-app">Launch the app<a class="anchor" aria-label="anchor" href="#launch-the-app"></a>
 </h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">gamenight</span><span class="fu">::</span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>The app is for <strong>someone hosting a game night</strong>, and answers the question: <em>for my group’s size and ages, how much time do we need to allow to play a really well-rated game?</em></p>
 </div>
@@ -67,26 +70,31 @@
 <h2 id="find-games-from-the-console">Find games from the console<a class="anchor" aria-label="anchor" href="#find-games-from-the-console"></a>
 </h2>
 <p><code><a href="reference/find_games.html">find_games()</a></code> returns the games that suit your group, best rated first:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://etc5523-2026.github.io/etc5523-assignment-4-noormoolji17/">gamenight</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/find_games.html">find_games</a></span><span class="op">(</span>players <span class="op">=</span> <span class="fl">2</span>, max_minutes <span class="op">=</span> <span class="fl">30</span>, youngest_age <span class="op">=</span> <span class="fl">8</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## # A tibble: 5 × 12</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="do">##       id name           year min_players max_players playing_time min_age rating</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="do">##    &lt;int&gt; &lt;chr&gt;         &lt;int&gt;       &lt;int&gt;       &lt;int&gt;        &lt;int&gt;   &lt;int&gt;  &lt;dbl&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="do">## 1    521 Crokinole      1876           2           4           30       8   7.67</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="do">## 2 163412 Patchwork      2014           2           2           30       8   7.54</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="do">## 3 244522 That's Prett…  2018           1           4           30       8   7.41</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="do">## 4 194655 Santorini      2016           2           4           20       8   7.30</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="do">## 5 192291 Sushi Go Par…  2016           2           8           20       8   7.28</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="do">## # ℹ 4 more variables: average_rating &lt;dbl&gt;, users_rated &lt;int&gt;,</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="do">## #   cooperative &lt;lgl&gt;, url &lt;chr&gt;</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 5 × 12</span></span>
+<span><span class="co">#&gt;       id name           year min_players max_players playing_time min_age rating</span></span>
+<span><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;         &lt;int&gt;       &lt;int&gt;       &lt;int&gt;        &lt;int&gt;   &lt;int&gt;  &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1    521 Crokinole      1876           2           4           30       8   7.67</span></span>
+<span><span class="co">#&gt; 2 163412 Patchwork      2014           2           2           30       8   7.54</span></span>
+<span><span class="co">#&gt; 3 244522 That's Prett…  2018           1           4           30       8   7.41</span></span>
+<span><span class="co">#&gt; 4 194655 Santorini      2016           2           4           20       8   7.30</span></span>
+<span><span class="co">#&gt; 5 192291 Sushi Go Par…  2016           2           8           20       8   7.28</span></span>
+<span><span class="co">#&gt; # ℹ 4 more variables: average_rating &lt;dbl&gt;, users_rated &lt;int&gt;,</span></span>
+<span><span class="co">#&gt; #   cooperative &lt;lgl&gt;, url &lt;chr&gt;</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="the-data">The data<a class="anchor" aria-label="anchor" href="#the-data"></a>
 </h2>
 <p>The package includes <code>games</code>: 20,309 tabletop games (board, card, dice and party games) with their player counts, playing times, suggested minimum ages and ratings. The data comes from <a href="https://boardgamegeek.com" class="external-link">BoardGameGeek</a>, via the <a href="https://www.kaggle.com/datasets/jvanelteren/boardgamegeek-reviews" class="external-link">Kaggle BoardGameGeek Reviews dataset</a> by Jesse van Elteren, as prepared for <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-01-25" class="external-link">TidyTuesday on 25 January 2022</a>. The script that downloads and cleans it is in <code>data-raw/games.R</code>. See <code><a href="reference/games.html">?games</a></code> for what each column means and how the data was cleaned.</p>
+</div>
+<div class="section level2">
+<h2 id="generative-ai-declaration">Generative AI declaration<a class="anchor" aria-label="anchor" href="#generative-ai-declaration"></a>
+</h2>
+<p>I used Claude (Anthropic) as a supporting tool throughout this assignment. It helped me draft certain parts of code based on my needs, polish and refine code chunks as well. It helped me with debugging package, check and GitHub setup errors. I also used it to review my work against the course material. I tested all the code and every app scenario, revised the text in my own words, decided which suggestions to keep or reject, and can explain how the package works.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
