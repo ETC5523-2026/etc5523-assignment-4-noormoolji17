@@ -96,13 +96,12 @@ ui <- page_sidebar(
     plotOutput("tradeoff_plot", height = "380px"),
     card_footer(
       class = "help-text",
-      "Each point is a game your group could play.",
+      "Each point is a game your group can play.",
       span(style = paste0("color:", col_fits, "; font-weight:600;"), "Solid red dots"),
-      "fit in your time; hollow grey circles need more time. The dashed line",
-      "is your time limit. Higher is better rated, so look for red dots near",
-      "the top. If the best grey circles sit just right of the line, a little more time",
-      "would get you a noticeably better game. The time axis is stretched at",
-      "the short end so quick games are easier to tell apart."
+      "fit your time; hollow grey circles need more. Higher is better rated.",
+      "Grey circles just right of the dashed line show what a little extra time",
+      "would unlock. Ratings come from BoardGameGeek users (January 2022). Longer",
+      "games tend to be rated higher, so ratings may not reflect casual groups."
     )
   ),
   

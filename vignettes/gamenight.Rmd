@@ -118,9 +118,11 @@ you know what to change. If the number of players is left blank or is outside
 
 ## Things to keep in mind
 
-- Ratings come from BoardGameGeek users, who are enthusiasts and tend to rate
-  longer, more complex games highly. A casual group might enjoy shorter games
-  more than the ratings suggest.
+- Ratings come from BoardGameGeek users. Among well-known games, longer
+  games tend to be rated higher; the median rating rises from about 6.1 for
+  games of 30 minutes or less to about 6.6 for games over two hours. The data
+  shows this pattern, not its cause, but the ratings may not reflect
+  casual groups.
 - The data is a snapshot from January 2022, so newer games are missing.
 - "Board games" here means any tabletop game on BoardGameGeek, including card,
   dice and party games.
