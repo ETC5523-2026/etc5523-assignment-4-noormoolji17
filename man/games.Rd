@@ -3,11 +3,7 @@
 \docType{data}
 \name{games}
 \alias{games}
-\title{Board games with ratings player counts and playing times
-A cleaned table of board games listed on BoardGameGeek combining each
-games community rating with the details a game-night host requires: the
-number of people that can play how long it takes and the suggested minimum
-age.}
+\title{Board games with ratings, player counts and playing times}
 \format{
 A data frame with 20309 rows and 12 columns:
 \describe{
@@ -41,11 +37,10 @@ as prepared for TidyTuesday on 25 January 2022
 games
 }
 \description{
-Board games with ratings player counts and playing times
-A cleaned table of board games listed on BoardGameGeek combining each
-games community rating with the details a game-night host requires: the
-number of people that can play how long it takes and the suggested minimum
-age.
+A cleaned table of board games listed on BoardGameGeek, combining each
+game's community rating with the details a game-night host needs: the
+number of people who can play, how long it takes, and the suggested
+minimum age.
 }
 \details{
 Ratings come from BoardGameGeek users. Among well-known games,

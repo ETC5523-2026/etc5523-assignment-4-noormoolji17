@@ -1,9 +1,9 @@
-#' Board games with ratings player counts and playing times
-
-#' A cleaned table of board games listed on BoardGameGeek combining each
-#' games community rating with the details a game-night host requires: the 
-#' number of people that can play how long it takes and the suggested minimum 
-#' age.
+#' Board games with ratings, player counts and playing times
+#'
+#' A cleaned table of board games listed on BoardGameGeek, combining each
+#' game's community rating with the details a game-night host needs: the
+#' number of people who can play, how long it takes, and the suggested
+#' minimum age.
 #'
 #' @format A data frame with 20309 rows and 12 columns:
 #' \describe{
