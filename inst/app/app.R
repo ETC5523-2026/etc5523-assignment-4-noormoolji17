@@ -150,17 +150,13 @@ server <- function(input, output, session) {
     )
   })
   
-  # Games that suit the group AND fit in the time available
+  # Games that also fit in the time available. Filtering any_time() keeps one
+  # source of truth: the group filters are only written once.
   matches <- reactive({
-    gamenight::find_games(
-      players = players(),
-      max_minutes = input$max_minutes,
-      youngest_age = youngest_age(),
-      min_ratings = as.numeric(input$min_ratings),
-      cooperative_only = input$coop
-    )
+    all <- any_time()
+    all[all$playing_time <= input$max_minutes, ]
   })
-  
+
   output$summary <- renderUI({
     fits <- matches()
     all <- any_time()
