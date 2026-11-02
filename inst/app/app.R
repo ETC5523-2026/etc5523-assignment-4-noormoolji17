@@ -228,7 +228,9 @@ server <- function(input, output, session) {
     all <- any_time()
     validate(need(nrow(all) > 0, "No games suit this group. Try changing the settings on the left."))
     
-    all$fits <- ifelse(all$playing_time <= input$max_minutes,
+    # A game is red if it's in matches(), so the plot uses the same rule as
+    # the summary and table
+    all$fits <- ifelse(all$id %in% matches()$id,
                        "Fits your time", "Needs more time")
     
     # Nudge each game slightly left or right so games with the same playing
